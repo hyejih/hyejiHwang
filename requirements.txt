@@ -3,4 +3,4 @@ pandas
 streamlit_option_menu
 matplotlib
 openpyxl
-webbrowser
+
