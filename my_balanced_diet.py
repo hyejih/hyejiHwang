@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import requests
+import webbrowser
 import matplotlib.pyplot as plt
 
 from streamlit_option_menu import option_menu
@@ -32,7 +33,7 @@ if choice_menu == 'Recent':
     response_url = "https://www.menti.com/alja12kkhqzn"
     if st.button("MentiMeter 응답하기", key="menti_response"):
         # 버튼을 클릭하면 MentiMeter 링크로 이동
-        st.markdown(f'<meta http-equiv="refresh" content="0;URL={response_url}">', unsafe_allow_html=True)
+        webbrowser.open_new_tab(response_url)
 
     mentimeter_embed_code = """
     <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'>
